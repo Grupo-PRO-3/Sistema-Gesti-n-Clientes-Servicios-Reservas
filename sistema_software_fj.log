@@ -1,0 +1,99 @@
+2026-05-12 10:09:07,646 | INFO | SoftwareFJ | Aplicación iniciada.
+2026-05-12 10:09:17,196 | INFO | SoftwareFJ | Cliente registrado: Cliente #1: Ana Gómez | ana@email.com | 3001234567
+2026-05-12 10:09:17,196 | INFO | SoftwareFJ | Operación registrar_cliente finalizada.
+2026-05-12 10:09:17,196 | ERROR | SoftwareFJ | Error registrando cliente: El nombre debe tener al menos 3 caracteres.
+2026-05-12 10:09:17,196 | INFO | SoftwareFJ | Operación registrar_cliente finalizada.
+2026-05-12 10:09:17,196 | ERROR | SoftwareFJ | Operación 2 fallida y controlada.
+Traceback (most recent call last):
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 522, in simular_operaciones
+    resultado = operacion()  # Ejecuta la función anónima seleccionada.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 508, in <lambda>
+    lambda: self.registrar_cliente("Li", "correo_invalido", "12"),  # Cliente inválido.
+            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 450, in registrar_cliente
+    cliente = Cliente(nombre, correo, telefono)  # Crea el objeto Cliente con validaciones.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 130, in __init__
+    self.nombre = nombre  # Usa el setter para validar y guardar el nombre recibido.
+    ^^^^^^^^^^^
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 146, in nombre
+    raise DatosInvalidosError("El nombre debe tener al menos 3 caracteres.")  # Informa longitud inválida.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+DatosInvalidosError: El nombre debe tener al menos 3 caracteres.
+2026-05-12 10:09:17,205 | INFO | SoftwareFJ | Cliente registrado: Cliente #3: Carlos Ruiz | carlos@email.com | 3109876543
+2026-05-12 10:09:17,205 | INFO | SoftwareFJ | Operación registrar_cliente finalizada.
+2026-05-12 10:09:17,207 | INFO | SoftwareFJ | Servicio creado: Servicio #4: Reserva De Sala | Base: $80,000 | Disponible
+2026-05-12 10:09:17,207 | INFO | SoftwareFJ | Operación crear_servicio finalizada.
+2026-05-12 10:09:17,207 | ERROR | SoftwareFJ | Error creando servicio: Tipo de sala inválido. Use: pequena, mediana o grande.
+2026-05-12 10:09:17,207 | INFO | SoftwareFJ | Operación crear_servicio finalizada.
+2026-05-12 10:09:17,207 | ERROR | SoftwareFJ | Operación 5 fallida y controlada.
+Traceback (most recent call last):
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 522, in simular_operaciones
+    resultado = operacion()  # Ejecuta la función anónima seleccionada.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 511, in <lambda>
+    lambda: self.crear_servicio("reserva sala", "gigante"),  # Servicio inválido.
+            ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 475, in crear_servicio
+    servicio = clase_servicio(parametro)  # Crea el servicio usando polimorfismo de clases.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 268, in __init__
+    self.validar_parametros()  # Valida que el tipo de sala exista en las opciones permitidas.
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 284, in validar_parametros
+    raise DatosInvalidosError("Tipo de sala inválido. Use: pequena, mediana o grande.")  # Informa error.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+DatosInvalidosError: Tipo de sala inválido. Use: pequena, mediana o grande.
+2026-05-12 10:09:17,209 | INFO | SoftwareFJ | Servicio creado: Servicio #6: Alquiler De Equipo | Base: $55,000 | Disponible
+2026-05-12 10:09:17,209 | INFO | SoftwareFJ | Operación crear_servicio finalizada.
+2026-05-12 10:09:17,209 | INFO | SoftwareFJ | Servicio creado: Servicio #7: Asesoría Especializada | Base: $120,000 | Disponible
+2026-05-12 10:09:17,210 | INFO | SoftwareFJ | Operación crear_servicio finalizada.
+2026-05-12 10:09:17,210 | INFO | SoftwareFJ | Reserva creada: Reserva #8: Ana Gómez - Reserva De Sala | Duración: 2h | Estado: pendiente | Total: $0
+2026-05-12 10:09:17,210 | INFO | SoftwareFJ | Operación crear_reserva finalizada.
+2026-05-12 10:09:17,210 | ERROR | SoftwareFJ | Error creando reserva: La reserva necesita un cliente válido.
+2026-05-12 10:09:17,210 | INFO | SoftwareFJ | Operación crear_reserva finalizada.
+2026-05-12 10:09:17,210 | ERROR | SoftwareFJ | Operación 9 fallida y controlada.
+Traceback (most recent call last):
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 522, in simular_operaciones
+    resultado = operacion()  # Ejecuta la función anónima seleccionada.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 515, in <lambda>
+    lambda: self.crear_reserva("cliente falso", self.servicios[0], 1),  # Reserva con cliente inválido.
+            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 492, in crear_reserva
+    reserva = Reserva(cliente, servicio, duracion)  # Crea la reserva aplicando validaciones.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 356, in __init__
+    raise ReservaInvalidaError("La reserva necesita un cliente válido.")  # Informa cliente inválido.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ReservaInvalidaError: La reserva necesita un cliente válido.
+2026-05-12 10:09:17,211 | ERROR | SoftwareFJ | Error creando reserva: La duración de la reserva debe ser positiva.
+2026-05-12 10:09:17,212 | INFO | SoftwareFJ | Operación crear_reserva finalizada.
+2026-05-12 10:09:17,212 | ERROR | SoftwareFJ | Operación 10 fallida y controlada.
+Traceback (most recent call last):
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 522, in simular_operaciones
+    resultado = operacion()  # Ejecuta la función anónima seleccionada.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 516, in <lambda>
+    lambda: self.crear_reserva(self.clientes[1], self.servicios[1], -3),  # Reserva con duración inválida.
+            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 492, in crear_reserva
+    reserva = Reserva(cliente, servicio, duracion)  # Crea la reserva aplicando validaciones.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 362, in __init__
+    raise ReservaInvalidaError("La duración de la reserva debe ser positiva.")  # Informa error de duración.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ReservaInvalidaError: La duración de la reserva debe ser positiva.
+2026-05-12 10:09:17,213 | ERROR | SoftwareFJ | Error creando servicio: Tipo de servicio desconocido. Use: reserva sala, alquiler equipo o asesoria especializada.
+2026-05-12 10:09:17,213 | INFO | SoftwareFJ | Operación crear_servicio finalizada.
+2026-05-12 10:09:17,213 | ERROR | SoftwareFJ | Operación 11 fallida y controlada.
+Traceback (most recent call last):
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 522, in simular_operaciones
+    resultado = operacion()  # Ejecuta la función anónima seleccionada.
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 517, in <lambda>
+    lambda: self.crear_servicio("hotel", "premium"),  # Tipo de servicio inexistente.
+            ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Jesus Villadiego\Desktop\INGENIERIA ELECTRONICA\PROGRAMACIÓN\FASE-4-trabajo final\sistema_software_fj_interfaz_mejorada.py", line 474, in crear_servicio
+    raise DatosInvalidosError("Tipo de servicio desconocido. Use: reserva sala, alquiler equipo o asesoria especializada.")  # Error.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+DatosInvalidosError: Tipo de servicio desconocido. Use: reserva sala, alquiler equipo o asesoria especializada.
+2026-05-12 10:09:17,215 | INFO | SoftwareFJ | Cliente registrado: Cliente #11: María López | maria@email.com | 3215558888
+2026-05-12 10:09:17,215 | INFO | SoftwareFJ | Operación registrar_cliente finalizada.
+2026-05-12 10:09:17,215 | INFO | SoftwareFJ | Reserva confirmada: Reserva #8: Ana Gómez - Reserva De Sala | Duración: 2h | Estado: confirmada | Total: $0
+2026-05-12 10:09:17,215 | INFO | SoftwareFJ | Intento de confirmación finalizado para reserva #8.
+2026-05-12 10:09:17,215 | INFO | SoftwareFJ | Reserva procesada correctamente: Reserva #8: Ana Gómez - Reserva De Sala | Duración: 2h | Estado: procesada | Total: $328,200
+2026-05-12 10:09:17,215 | INFO | SoftwareFJ | Proceso de reserva #8 finalizado con estado procesada.
+2026-05-12 10:09:40,452 | INFO | SoftwareFJ | Aplicación finalizada.
